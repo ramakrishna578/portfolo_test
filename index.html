@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naresh Aithagoni</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo-box">
+        <div class="logo">
+          <span class="firstname">N</span>
+          <span class="firstname">a</span>
+          <span class="firstname">r</span>
+          <span class="firstname">e</span>
+          <span class="firstname name-animation">s</span>
+          <span class="firstname name-animation">h</span>
+          <span class="lastname">A</span>
+          <span class="lastname">i</span>
+          <span class="lastname">t</span>
+          <span class="lastname">h</span>
+          <span class="lastname">a</span>
+          <span class="lastname">g</span>
+          <span class="lastname">o</span>
+          <span class="lastname">n</span>
+          <span class="lastname">i</span>
+        </div>
+        <div class="nav-links">
+          <span class="glow-on-hover"><a href="about.html">About</a></span>
+          <span class="glow-on-hover">+<a href="experience.html">Experience</a></span>
+        </div>
+      </div>
+      <h1 class="heading-primary">
+        <span class="heading-primary-main">Full-Stack developer</span>
+        <span class="heading-primary-sub">Build's websites that sells</span>
+      </h1>
+    </header>
+
+    <footer id="footer">
+      <div class="contact-me">
+        <span class="line animated bounce">reach Me @: <span style="letter-spacing: 2px;">&nbsp;anaresh7777@gmail.com</span></span>
+      </div>
+      <div class="social-contacts">
+        <div class="copy-rights">
+          <span>&copy;nareshaithagoni&nbsp; <script>document.write(new Date().getFullYear())</script></span>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a class="sociali github" href="https://github.com/naithagoni/"
+                target="_blank"><i
+                  class="fa fa-github" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="sociali linkedin"
+                href="https://www.linkedin.com/in/naresh-aithagoni-a6478813a/"
+                target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="sociali instagram"
+                href="https://www.instagram.com/anaresh911/"
+                target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="sociali facebook"
+                href="https://www.facebook.com/profile.php?id=100006318071921"
+                target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li>
+              <a class="sociali twitter" href="https://twitter.com/anaresh911"
+                target="_blank"><i
+                  class="fa fa-twitter" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+    <script>
+    $(document).ready(() => {
+      setTimeout(() => {
+        var firstnameLength = $(".firstname").length;
+        $($(".firstname").get()).each((i, e) => {
+          $(e).delay(500 * (i - 1)).fadeIn(500);
+          if(i >= firstnameLength - 1) {
+            $(e).animate({
+              "margin-right": "25px"
+            });
+          }
+        });
+      }, 1000);
+    });
+    </script>
+  </body>
+</html>

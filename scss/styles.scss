@@ -1,0 +1,797 @@
+// @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+// font-family: 'Dancing Script', cursive;
+
+@import url('https://fonts.googleapis.com/css?family=Gurajada&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ruthie&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+// brinjal #1F1B24 
+// Secondary Teal #03DAC5
+// #272727
+// #121212
+
+// rgba(126, 213, 111, 0.5), rgba(40, 180, 131, 0.5)
+
+$background-color: #000;
+$base-color: #fff;
+
+$left-arrow-color: #BB86FC;
+
+$footer-text-color: #757575;
+$footer-bg-color: #000;
+
+$github-color: #24292e;
+$github-hover-color: #c6cbd1;
+$linkedin-color: #344150;
+$linkedin-hover-color: #0077b5;
+$facebook-color: #344150;
+$facebook-hover-color: #3b5998;
+$twitter-color: #344150;
+$twitter-hover-color: #1da1f2;
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: $background-color;
+  color: $base-color;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .header {
+    height: 90vh;
+    background-image: linear-gradient(to right bottom, rgba(33, 33, 33, 0.6), rgba(50, 50, 50, 0.6)), url(../images/naresh1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    .logo-box {
+      height: 10vh;
+      display: flex;
+
+      .logo {
+        width: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 20px;
+        font-family: 'Ruthie', 'Times New Roman', Times, serif;
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 2px;
+
+        .firstname:not(:first-of-type) {
+          display: none;
+        }
+
+        .name-animation {
+          background: -webkit-linear-gradient(135deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #ff00c8, #7a00ff, #002bff, #ff0000);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-size: 600% 600%;
+          animation: AnimationName 7s ease infinite;
+        }
+
+        @keyframes AnimationName {
+          0% {
+            background-position: 0% 43%
+          }
+
+          50% {
+            background-position: 100% 58%
+          }
+
+          100% {
+            background-position: 0% 43%
+          }
+        }
+      }
+
+      .nav-links {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-family: "Gurajada", serif;
+
+        span {
+          padding: 20px;
+          font-size: 20px;
+          font-weight: bold;
+          letter-spacing: 4px;
+          text-decoration: none;
+
+          a {
+            text-decoration: none;
+            font-size: 18px;
+            color: $base-color;
+            letter-spacing: 0.15em;
+          }
+
+          a:hover {
+            background: linear-gradient(to bottom, #ff9800 0%, #ff9800 100%);
+            background-position: 0 100%;
+            background-repeat: repeat-x;
+            background-size: 2px 2px;
+          }
+        }
+      }
+    }
+
+    .heading-primary {
+      height: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      backface-visibility: hidden;
+
+      .heading-primary-main {
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 30px;
+
+        animation: moveMainHeaderLeft 1s ease-out;
+      }
+
+      .heading-primary-sub {
+        font-size: 26px;
+        font-weight: 400;
+        letter-spacing: 22px;
+
+        animation: moveSubHeaderRight 1s ease-out;
+      }
+    }
+  }
+
+  .link-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10vh;
+    background: linear-gradient(to right bottom, rgba(18, 18, 18, 0.5), rgba(47, 48, 50, 0.5), rgba(36, 36, 36, 0.5));
+
+    .left-arrow {
+      padding-left: 20px;
+      text-decoration: none;
+      color: $left-arrow-color;
+    }
+  }
+
+  /* --------------- ABOUT page ----------------- */
+  .about-me {
+    height: 80vh;
+
+    .about-me-header {
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5), rgba(40, 180, 131, 0.5)), url('../images/landscape.jpg');
+      background-size: cover;
+      background-position: top;
+
+      .developer-heading {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        font-family: "Gurajada", serif;
+        text-transform: uppercase;
+
+        .developer-heading-main {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-end;
+          padding-left: 5%;
+          height: 50%;
+          letter-spacing: 5px;
+          font-size: 4vw;
+          font-weight: 100;
+        }
+
+        .developer-heading-sub {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-left: 5%;
+          height: 50%;
+          font-size: 2vw;
+          font-weight: 100;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    .about-me-body {
+      display: flex;
+      flex-direction: row;
+      height: 50%;
+
+      .about-me-logo {
+        height: 100%;
+        width: 40%;
+      }
+
+      .about-me-text {
+        height: 90%;
+        width: 60%;
+        background-color: #1F1B24;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+        text-align: justify;
+        font-family: "Lato script=all rev=1", "Adobe Blank";
+        font-weight: lighter;
+        font-style: normal;
+
+        animation: moveAboutMeTop 3s ease-out;
+
+        span {
+          font-size: 32px;
+          line-height: 1.5;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  /* ------------------ end of ABOUT page ---------------------- */
+
+  /* ------------------ EXPERIENCE page ---------------------- */
+  .experience {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 80vh;
+
+    .first {
+      background-color: #1F1B24;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: moveMainHeaderLeft 2s ease-out;
+
+      .hms {
+        letter-spacing: 0.094em;
+        padding: 20px;
+
+        .hms-designation {
+          font-size: 1.6rem;
+          line-height: 1.5;
+          font-weight: 600;
+        }
+
+        .hms-company-name {}
+
+        .hms-working-date-palce {
+          color: #64638f;
+
+          .hms-working-date-range {}
+
+          .hms-working-place {}
+        }
+      }
+    }
+
+    .second {
+      background-color: $background-color;
+    }
+
+    .third {
+      background-color: $background-color;
+    }
+
+    .fourth {
+      background-color: #121212;
+      border-top-left-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      animation: moveSubHeaderRight 2s ease-out;
+
+      .fh {
+        letter-spacing: 0.094em;
+        padding: 20px;
+
+        .fh-designation {
+          font-size: 1.6rem;
+          line-height: 1.5;
+          font-weight: 600;
+        }
+
+        .fh-company-name {}
+
+        .fh-working-date-palce {
+          color: #424242;
+
+          .fh-working-date-range {}
+
+          .fh-working-place {}
+        }
+
+        .fh-topic-name {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  /* ------------------ end of EXPERIENCE page ---------------------- */
+
+
+
+
+  #footer {
+    background-color: $footer-bg-color;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-family: "Gurajada", serif;
+
+    .contact-me {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30%;
+      height: 100%;
+
+      .line {
+        // letter-spacing: 2px;
+      }
+
+      .line:hover {
+        background: linear-gradient(to bottom, #ff9800 0%, #ff9800 100%);
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 2px 2px;
+      }
+
+      .animated {
+        animation-duration: 3s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+      }
+
+      .bounce {
+        animation-name: bounce;
+      }
+    }
+
+    .social-contacts {
+      width: 70%;
+      height: 100%;
+      flex-direction: row;
+      display: flex;
+
+
+      .copy-rights {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $footer-text-color;
+        width: 30%;
+        height: 100%;
+      }
+
+      .social-icons {
+        width: 100%;
+        height: 100%;
+
+        ul {
+          margin-top: 0;
+          margin-right: 20px;
+          padding: 0;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          height: 100%;
+          list-style: none;
+
+          li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a.sociali {
+              text-decoration: none;
+              border-radius: 50%;
+              margin-right: 12px;
+            }
+
+            .fa {
+              font-size: 22px;
+            }
+
+            .fa-github {
+              color: $github-color;
+            }
+
+            .fa-github:hover {
+              color: $github-hover-color;
+            }
+
+            .fa-linkedin {
+              color: $linkedin-color;
+            }
+
+            .fa-linkedin:hover {
+              color: $linkedin-hover-color;
+            }
+
+            .fa-instagram {
+              color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            }
+
+            .fa-instagram:hover {
+              color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            }
+
+            .fa-facebook {
+              color: $facebook-color;
+            }
+
+            .fa-facebook:hover {
+              color: $facebook-hover-color !important;
+
+            }
+
+            .fa-twitter {
+              color: $twitter-color;
+            }
+
+            .fa-twitter:hover {
+              color: $twitter-hover-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 
+KEYFRAMES 
+*/
+
+@keyframes moveMainHeaderLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveSubHeaderRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveAboutMeTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  80% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 
+END-KEYFRAMES 
+*/
+
+
+
+
+
+
+/* ----------- MEDIA QUARIES ----------- */
+@media only screen and (max-width : 1024px) {
+  .logo-box {
+    flex-direction: column;
+    height: auto !important;
+
+    .logo {
+      justify-content: center !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 10vh !important;
+    }
+
+    .nav-links {
+      width: 100% !important;
+      height: 10vh !important;
+      justify-content: center !important;
+    }
+  }
+
+  #footer {
+    flex-direction: column !important;
+
+    .contact-me {
+      font-size: 12px !important;
+      width: 100% !important;
+    }
+
+    .social-contacts {
+      width: 100% !important;
+
+      .copy-rights {
+        justify-content: center !important;
+        width: 50% !important;
+      }
+
+      .social-icons {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* ----------- Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) {
+  .header {
+    background-position: bottom !important;
+
+    .heading-primary {
+      .heading-primary-main {
+        font-size: 10vw !important;
+        font-weight: 400 !important;
+        letter-spacing: 16px !important;
+        padding-left: 20px !important;
+      }
+
+      .heading-primary-sub {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ----------- Pixel 2 ----------- */
+@media only screen and (min-device-width: 411px) and (max-device-width: 731px) {
+  .header {
+    background-position: bottom !important;
+
+    .heading-primary {
+      .heading-primary-main {
+        font-size: 11vw !important;
+        font-weight: 400 !important;
+        letter-spacing: 16px !important;
+        padding-left: 20px !important;
+      }
+
+      .heading-primary-sub {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+  .header {
+    background-position: bottom !important;
+
+    .heading-primary {
+      .heading-primary-main {
+        font-size: 9vw !important;
+        font-weight: 400 !important;
+        letter-spacing: 15px !important;
+        padding-left: 20px !important;
+      }
+
+      .heading-primary-sub {
+        display: none;
+      }
+    }
+  }
+
+  .about-me {
+    .about-me-body {
+      .about-me-text {
+        span {
+          font-size: 10px !important;
+          line-height: 0 !important;
+          letter-spacing: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+/* ----------- iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  .header {
+    background-position: bottom !important;
+
+    .heading-primary {
+      .heading-primary-main {
+        font-size: 10vw !important;
+        font-weight: 400 !important;
+        letter-spacing: 16px !important;
+        padding-left: 20px !important;
+      }
+
+      .heading-primary-sub {
+        display: none;
+      }
+    }
+  }
+
+  .about-me {
+    .about-me-body {
+      .about-me-text {
+        span {
+          font-size: 15px !important;
+          line-height: 1.3 !important;
+          letter-spacing: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  .header {
+    background-position: bottom !important;
+
+    .heading-primary {
+      .heading-primary-main {
+        font-size: 11vw !important;
+        font-weight: 400 !important;
+        letter-spacing: 15px !important;
+        padding-left: 20px !important;
+      }
+
+      .heading-primary-sub {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ----------- iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  .header {
+    background-position: bottom !important;
+
+    .heading-primary {
+      .heading-primary-main {
+        font-size: 10vw !important;
+        font-weight: 400 !important;
+        letter-spacing: 16px !important;
+        padding-left: 20px !important;
+      }
+
+      .heading-primary-sub {
+        display: none;
+      }
+    }
+  }
+
+  .about-me {
+    .about-me-body {
+      .about-me-text {
+        span {
+          font-size: 15px !important;
+          line-height: 1.4 !important;
+          letter-spacing: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+/* ----------- iPad ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .heading-primary {
+    .heading-primary-main {
+      font-size: 35px !important;
+      font-weight: 400 !important;
+      letter-spacing: 14px !important;
+    }
+
+    .heading-primary-sub {
+      font-size: 14px !important;
+      font-weight: 400 !important;
+      letter-spacing: 15px !important;
+      display: inline !important;
+    }
+  }
+
+  .about-me {
+    .about-me-body {
+      .about-me-text {
+        span {
+          font-size: 25px !important;
+        }
+      }
+    }
+  }
+}
+
+/* ----------- iPad Pro ----------- */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) {
+  .heading-primary {
+    .heading-primary-main {
+      font-size: 54px !important;
+      font-weight: 400 !important;
+      letter-spacing: 14px !important;
+    }
+
+    .heading-primary-sub {
+      font-size: 24px !important;
+      font-weight: 400 !important;
+      letter-spacing: 15px !important;
+      display: inline !important;
+    }
+  }
+
+  .about-me {
+    .about-me-body {
+      .about-me-text {
+        span {
+          font-size: 32px !important;
+        }
+      }
+    }
+  }
+}
+
+/* ----------- END OF MEDIA QUARIES ----------- */
